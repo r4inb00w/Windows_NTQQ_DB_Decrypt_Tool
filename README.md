@@ -181,7 +181,7 @@ pids = []
 
 NTQQ聊天消息数据库中存储的聊天消息是一段protobuf序列化数据，聊天消息数据库消息表中的40800字段即为聊天消息，如下所示：
 
-<img src="./images/498fbfcf08e7b5dfc18f27d318ae32b8376790.png" alt="498fbfcf08e7b5dfc18f27d318ae32b8376790" style="zoom:50%;" />
+<img src="./images/c50ad49d-005b-4694-ac68-ed2a3e4d6c3a.png" alt="c50ad49d-005b-4694-ac68-ed2a3e4d6c3a" style="zoom:50%;" />
 
 可以使用protobuf-inspector以及blackboxprotobuf分析此序列化数据，猜测其数据结构，可以构造出QQ_DB_Decrypt中的QQ_Message.proto，使用protoc编译该.proto文件得到python类库，即QQ_DB_Decrypt中的QQ_Message_pb2.py。接下来即可使用此类库进行QQ聊天消息的反序列化。
 
